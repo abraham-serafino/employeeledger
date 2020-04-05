@@ -1,29 +1,21 @@
-# README #
+# Employee Ledger #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Step-by-step instructions for creating and deploying a secure Spring Data REST application using Docker on AWS.
 
-### What is this repository for? ###
+### Navigating the Tutorial ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* [Step 0](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step0/) - Required ingredients
 
-### How do I get set up? ###
+### How do I explore the code? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Each branch in this repository (step0, step1, step2, etc.) represents a completed step. step0 is the
+initial state without any of the work completed, step1 is what things should look like at the end of
+Step 1, etc. The README for each step explains how to do the work for that step.
 
-### Contribution guidelines ###
+### Author ###
 
-* Writing tests
-* Code review
-* Other guidelines
+The Employee Ledger project was side project by Abraham Serafino, who can be reached by means of the following:
 
-### Who do I talk to? ###
+email: [connect@AbrahamSerafino.com](mailto:connect@AbrahamSerafino.com)
 
-* Repo owner or admin
-* Other community or team contact
+website: [www.AbrahamSerafino.com](http://www.AbrahamSerafino.com)
