@@ -94,7 +94,7 @@ public interface EmployeeRepository extends PagingAndSortingRepository<Employee,
     "number" : 0
   }
 }
-``
+```
 
 Notice that your REST endpoint includes HATEOAS links which are provided by Spring Data REST for free.
 
