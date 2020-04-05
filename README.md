@@ -98,7 +98,10 @@ public interface EmployeeRepository extends PagingAndSortingRepository<Employee,
 
 Notice that your REST endpoint includes HATEOAS links which are provided by Spring Data REST for free.
 
-## Go Forward or Back ##
+## Go Forward ##
+
+[Step 2 - Add Swagger](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step2)
+
+## Go Back ##
 
 [Step 0 - Required Ingredients](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step0)
-[Step 2 - Add Swagger](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step2)
