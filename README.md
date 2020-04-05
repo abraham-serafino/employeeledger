@@ -2,33 +2,103 @@
 
 Step-by-step instructions for creating and deploying a secure Spring Data REST application using Docker on AWS.
 
-## Step 0 -- Required Ingredients ##
+## Step 1 -- Create REST Repository ##
 
-To begin building this project, you will need:
+* First create a JPA entity:
 
-* [OpenJDK 11](https://adoptopenjdk.net/)
-* [An IDE](https://www.jetbrains.com/idea/download) -- you can also use Eclipse
+``src/main/java/com/abrahamserafino/employeeledger/Employee.java``
 
-Once you have downloaded and installed the necessary tools, 
+```java
+package com.abrahamserafino.employeeledger;
 
-* Go to [start.spring.io](http://start.spring.io).
-* Choose a Gradle Project with Java as the language.
-* Enter a Group and Artifact ID (I chose "com.abrahamserafino" and "employeeledger").
-* Choose Jar packaging and Java version 11, and Spring Boot version 2.2.6.
-* Add the following dependencies:
-    * Rest Repositories
-    * Lombok
-    * Spring Data JPA
-    * H2 Database
-* Click the "Generate" bottom at the bottom of the page to download a .zip file containing the Spring Boot starter
-project.
-* Unzip the file into a local folder of your choice.
-* Go to the folder in a command terminal and issue the following command:
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.math.BigDecimal;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class Employee {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
+    private String name;
+    private BigDecimal salary;
+
+}
+
+```
+
+* Next comes the Spring Data JPA repository, a simple interface that will be implemented by Spring behind
+the scenes to create REST endpoints and HTTP request handlers that can query and manipulate a 
+database table based on the Entity definition you created above.
+
+``src/main/java/com/abrahamserafino/employeeledger/EmployeeRepository.java``
+
+```java
+package com.abrahamserafino.employeeledger;
+
+import java.util.List;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
+    List<Employee> findByName(@Param("name") String name);
+}
+
+```
+
+* Kill any running instances of your Spring Boot application using Ctrl+C, then restart 
 
     ```./gradlew clean bootRun```
 
-* Navigate to [http://localhost:8080](http://localhost:8080) to ensure something is running there. 
+* Navigate to [http://localhost:8080/employees](http://localhost:8080/employees). Now you should see something like this: 
 
-## Next Step ##
+```json
+{
+  "_embedded" : {
+    "employees" : [ ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/employees{?page,size,sort}",
+      "templated" : true
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/profile/employees"
+    },
+    "search" : {
+      "href" : "http://localhost:8080/employees/search"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 0,
+    "totalPages" : 0,
+    "number" : 0
+  }
+}
+```
 
-[Step 1](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step1)
+Notice that your REST endpoint includes HATEOAS links which are provided by Spring Data REST for free.
+
+## Go Forward or Back ##
+
+[Step 0 - Required Ingredients](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step0)
+[Step 2 - Add Swagger](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step2)
