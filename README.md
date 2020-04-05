@@ -70,31 +70,31 @@ public interface EmployeeRepository extends PagingAndSortingRepository<Employee,
 
 * Navigate to [http://localhost:8080/employees](http://localhost:8080/employees). Now you should see something like this: 
 
-    ```json
-    {
-      "_embedded" : {
-        "employees" : [ ]
-      },
-      "_links" : {
-        "self" : {
-          "href" : "http://localhost:8080/employees{?page,size,sort}",
-          "templated" : true
-        },
-        "profile" : {
-          "href" : "http://localhost:8080/profile/employees"
-        },
-        "search" : {
-          "href" : "http://localhost:8080/employees/search"
-        }
-      },
-      "page" : {
-        "size" : 20,
-        "totalElements" : 0,
-        "totalPages" : 0,
-        "number" : 0
-      }
+```json
+{
+  "_embedded" : {
+    "employees" : [ ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/employees{?page,size,sort}",
+      "templated" : true
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/profile/employees"
+    },
+    "search" : {
+      "href" : "http://localhost:8080/employees/search"
     }
-    ```
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 0,
+    "totalPages" : 0,
+    "number" : 0
+  }
+}
+``
 
 Notice that your REST endpoint includes HATEOAS links which are provided by Spring Data REST for free.
 
