@@ -56,7 +56,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 * Restart your application with `Ctrl+C` followed by `./gradlew clean bootRun`
 
 * Now you will be asked to login with `test` and `password` before you can navigate to
-[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
+[http://localhost:8080](http://localhost:8080).
+
+* After logging in, you can go back to Swagger:
+[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) 
 
 ## Go Forward ##
 
