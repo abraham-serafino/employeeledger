@@ -31,4 +31,4 @@ project.
 
 ## Next Step ##
 
-[Step 1](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step1)
+[Step 1 - Create REST Repository](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step1)
