@@ -2,20 +2,33 @@
 
 Step-by-step instructions for creating and deploying a secure Spring Data REST application using Docker on AWS.
 
-### Navigating the Tutorial ###
+## Step 0 -- Required Ingredients ##
 
-* [Step 0](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step0/) - Required ingredients
+To begin building this project, you will need:
 
-### How do I explore the code? ###
+* [OpenJDK 11](https://adoptopenjdk.net/)
+* [An IDE](https://www.jetbrains.com/idea/download) -- you can also use Eclipse
 
-Each branch in this repository (step0, step1, step2, etc.) represents a completed step. step0 is the
-initial state without any of the work completed, step1 is what things should look like at the end of
-Step 1, etc. The README for each step explains how to do the work for that step.
+Once you have downloaded and installed the necessary tools, 
 
-### Author ###
+* Go to [start.spring.io](http://start.spring.io).
+* Choose a Gradle Project with Java as the language.
+* Enter a Group and Artifact ID (I chose "com.abrahamserafino" and "employeeledger").
+* Choose Jar packaging and Java version 11, and Spring Boot version 2.2.6.
+* Add the following dependencies:
+    * Rest Repositories
+    * Lombok
+    * Spring Data JPA
+    * H2 Database
+* Click the "Generate" bottom at the bottom of the page to download a .zip file containing the Spring Boot starter
+project.
+* Unzip the file into a local folder of your choice.
+* Go to the folder in a command terminal and issue the following command:
 
-The Employee Ledger project was side project by Abraham Serafino, who can be reached by means of the following:
+    ```./gradlew clean bootRun```
 
-email: [connect@AbrahamSerafino.com](mailto:connect@AbrahamSerafino.com)
+* Navigate to [http://localhost:8080](http://localhost:8080) to ensure something is running there. 
 
-website: [www.AbrahamSerafino.com](http://www.AbrahamSerafino.com)
+## Next Step ##
+
+[Step 1](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step1)
