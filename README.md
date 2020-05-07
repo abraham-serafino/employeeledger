@@ -100,8 +100,8 @@ Notice that your REST endpoint includes HATEOAS links which are provided by Spri
 
 ## Go Forward ##
 
-[Step 2 - Add Swagger](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step2)
+[Step 2 - Add Swagger](https://github.com/abraham-serafino/employeeledger/tree/step2)
 
 ## Go Back ##
 
-[Step 0 - Required Ingredients](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step0)
+[Step 0 - Required Ingredients](https://github.com/abraham-serafino/employeeledger/tree/step0)
