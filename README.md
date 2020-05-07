@@ -35,8 +35,8 @@ plugins {
 
 ## Go Forward ##
 
-[Step 5 - Deploy to AWS](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step5)
+[Step 5 - Deploy to AWS](https://github.com/abraham-serafino/employeeledger/tree/step5)
 
 ## Go Back ##
 
-[Step 3 - Secure Your Application](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step3)
+[Step 3 - Secure Your Application](https://github.com/abraham-serafino/employeeledger/tree/step3)
