@@ -63,8 +63,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 ## Go Forward ##
 
-[Step 4 - Create a Docker Container](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step4)
+[Step 4 - Create a Docker Container](https://github.com/abraham-serafino/employeeledger/tree/step4)
 
 ## Go Back ##
 
-[Step 2 - Secure Your API](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step2)
+[Step 2 - Secure Your API](https://github.com/abraham-serafino/employeeledger/tree/step2)
