@@ -74,8 +74,8 @@ UI that will allow you to interact with the RESTful API you created in Step 1.
 
 ## Go Forward ##
 
-[Step 3 - Secure Your API](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step3)
+[Step 3 - Secure Your API](https://github.com/abraham-serafino/employeeledger/tree/step3)
 
 ## Go Back ##
 
-[Step 1 - Create Repositories](https://bitbucket.org/kungfuandjavascript/employeeledger/src/step1)
+[Step 1 - Create Repositories](https://github.com/abraham-serafino/employeeledger/tree/step1)
